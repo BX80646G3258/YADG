@@ -94,9 +94,9 @@ template<uint8_t ROWS, uint8_t COLS> inline void ButtonMatrix<ROWS, COLS>::write
   uint8_t bit = rowMasks[r];
   volatile uint8_t* out = rowRegisters[r];
 
-  // if (out == nullptr) {
-  //   return;
-  // }
+  if (out == nullptr) {
+    return;
+  }
 
   uint8_t oldSREG = SREG;
   cli();
