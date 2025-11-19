@@ -43,8 +43,8 @@ void InputAxisPolar::update(int16_t& outX, int16_t& outY) {
     filteredY = rawY + hysteresis;
   }
 
-  int16_t x = (int16_t)(filteredX - centerX);
-  int16_t y = (int16_t)(filteredY - centerY);
+  int16_t x = (int32_t)filteredX - centerX;
+  int16_t y = (int32_t)filteredY - centerY;
 
   if (invertX) { x = -x; }
   if (invertY) { y = -y; }
