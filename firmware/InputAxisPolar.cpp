@@ -46,8 +46,12 @@ void InputAxisPolar::update(int16_t& outX, int16_t& outY) {
   int16_t x = (int32_t)filteredX - centerX;
   int16_t y = (int32_t)filteredY - centerY;
 
-  if (invertX) { x = -x; }
-  if (invertY) { y = -y; }
+  if (invertX) {
+    x = -x;
+  }
+  if (invertY) {
+    y = -y;
+  }
 
   profiler.sample("atan");
   uint16_t theta = atan2Fast(y, x);
