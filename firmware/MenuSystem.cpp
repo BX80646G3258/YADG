@@ -142,7 +142,6 @@ static void adjustInputAxisPolar(InputAxisPolar& axis) {
         break;
       case 8:
         adjustOffset(axis);
-        // adjust<uint16_t>(OFFSET, axis.offset,  2048, 360);
         break;
       case 9:
         printWorking();
