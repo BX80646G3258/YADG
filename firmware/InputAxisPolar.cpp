@@ -148,7 +148,7 @@ void InputAxisPolar::resetAll() {
   smoothingX = 0;
   smoothingY = 0;
   offset = 0;
-  maxTheta = 768;
+  maxTheta = (uint32_t)2048 * 135 / 360;
   hysteresis = 2;
   autoCalibrate = true;
   polarMode = false;
